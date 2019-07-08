@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p $HOME/.local/bin
+(echo "$HOME/.local/bin" && yes Y) | (sh <(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh))
+echo N | opam init --disable-sandboxing --compiler=4.07.1
+opam install -y base jupyter
+echo '#use "topfind";;' >> $HOME/.ocamlinit
+jupyter kernelspec install --name ocaml-jupyter $HOME/.opam/4.07.1/share/jupyter --user
