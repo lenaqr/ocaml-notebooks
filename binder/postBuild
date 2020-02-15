@@ -6,4 +6,4 @@ echo N | opam init --disable-sandboxing --compiler=4.08.1
 opam update
 opam install -y base jupyter
 echo '#use "topfind";;' >> $HOME/.ocamlinit
-jupyter kernelspec install --name ocaml-jupyter $HOME/.opam/4.07.1/share/jupyter --user
+jupyter kernelspec install --name ocaml-jupyter $HOME/.opam/4.08.1/share/jupyter --user
